@@ -1,1 +1,1 @@
-1. 220101 git connect
+1. 220101 hj git connected!
