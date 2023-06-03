@@ -18,6 +18,9 @@
 	    VALUES(
 	    	   #{user_id},
 	    	   #{user_pw}, 
+	    	   #{nick_name},
+	    	   #{user_location},
+	    	   #{user_location_dong},
 	    	   TO_CHAR(SYSDATE,'yyyy.mm.dd hh24:mi'),
 		       #{user_name}, 
 		       #{user_email}
@@ -26,13 +29,13 @@
 	
 	<select id="memberLogin" parameterType="com.example.vue.web.vo.memberVo" resultType="com.example.vue.web.vo.memberVo">
 		SELECT *
-		  FROM BOARD_MEMBER
+		  FROM APPLE_MEMBER
 		 WHERE USER_ID = #{user_id}
 	</select>
 	
 	<select id="checkId" parameterType="com.example.vue.web.vo.memberVo" resultType="int">
 		SELECT COUNT(*) AS CNT
-		  FROM BOARD_MEMBER
+		  FROM APPLE_MEMBER
 		 WHERE USER_ID = #{user_id}	
 	</select>
 </mapper>
